@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sean-ePad", "Sean-ePad\Sean-ePad.vbproj", "{F17E1C49-F63E-4CD3-B60E-57C348C20F7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F17E1C49-F63E-4CD3-B60E-57C348C20F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17E1C49-F63E-4CD3-B60E-57C348C20F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F17E1C49-F63E-4CD3-B60E-57C348C20F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F17E1C49-F63E-4CD3-B60E-57C348C20F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB2E9D27-A223-4C4D-95A1-31F85BCF7861}
+	EndGlobalSection
+EndGlobal
