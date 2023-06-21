@@ -1,15 +1,12 @@
 ﻿Imports System.IO
-Imports Microsoft.Win32
 Public Class Form1
+    Dim current_file As String
+    Dim draft As String
+    Dim s_file As String
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         RichTextBox1.Text = ""
         Me.Text = "Sean-ePad"
-        If RichTextBox1.Text = "" Then
-
-        Else
-
-        End If
-
+        current_file = ""
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -47,7 +44,9 @@ Public Class Form1
 
             My.Computer.FileSystem.WriteAllText(location, "" & RichTextBox1.Text, True)
             Me.Text = SaveFileDialog1.FileName
-            'Me.Text &= " - Sean-ePad"
+            current_file = SaveFileDialog1.FileName
+            Me.Text &= " - Sean-ePad"
+            s_file = draft
         End If
 
 
@@ -79,7 +78,7 @@ Public Class Form1
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        If RichTextBox1.Text = "" Then
+        If current_file = "" Then
             If SaveFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
                 Dim location As String
 
@@ -95,8 +94,9 @@ Public Class Form1
             End If
         Else
 
-            My.Computer.FileSystem.DeleteFile(Me.Text)
-            My.Computer.FileSystem.WriteAllText(Me.Text, "" & RichTextBox1.Text, True)
+            My.Computer.FileSystem.DeleteFile(current_file)
+            My.Computer.FileSystem.WriteAllText(current_file, "" & RichTextBox1.Text, True)
+            s_file = draft
 
 
         End If
@@ -107,8 +107,10 @@ Public Class Form1
         If OpenFileDialog1.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             strtext = OpenFileDialog1.FileName
             Me.Text = OpenFileDialog1.FileName
+            current_file = OpenFileDialog1.FileName
             RichTextBox1.Text = My.Computer.FileSystem.ReadAllText(strtext)
-            'Me.Text &= " - Sean-ePad"
+            Me.Text &= " - Sean-ePad"
+            s_file = RichTextBox1.Text
         End If
     End Sub
 
@@ -145,8 +147,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
-        If RichTextBox1.Text = "" Then
+        'MsgBox(s_file)
+        'MsgBox(draft)
+        If draft = s_file Then
 
         Else
             Dim dialog2 As DialogResult
@@ -230,7 +233,7 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
     End Sub
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
+        draft = RichTextBox1.Text
     End Sub
 
     Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem7.Click
