@@ -6,7 +6,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If nofeaturealerts.Checked = True Then
             Dim file As System.IO.StreamWriter
-            file = My.Computer.FileSystem.OpenTextFileWriter("nofeaturealertsfff", True)
+            file = My.Computer.FileSystem.OpenTextFileWriter("nofeaturealerts", True)
             file.WriteLine("")
             file.Close()
         Else

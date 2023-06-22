@@ -379,4 +379,11 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
     Private Sub UsingNamespaceStdToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsingNamespaceStdToolStripMenuItem.Click
         RichTextBox1.Text &= "using namespace std;"
     End Sub
+
+    Private Sub CopyEntireDocumentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyEntireDocumentToolStripMenuItem.Click
+        If RichTextBox1.Text = "" Then
+        Else
+            My.Computer.Clipboard.SetText(RichTextBox1.Text)
+        End If
+    End Sub
 End Class

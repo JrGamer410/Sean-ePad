@@ -203,8 +203,9 @@ Partial Class Form1
         '
         'WordCountToolStripMenuItem
         '
+        Me.WordCountToolStripMenuItem.Enabled = False
         Me.WordCountToolStripMenuItem.Name = "WordCountToolStripMenuItem"
-        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.WordCountToolStripMenuItem.Text = "Word Count"
         '
         'FormatToolStripMenuItem
@@ -549,6 +550,7 @@ Partial Class Form1
         Me.setinfoclosedetector.Size = New System.Drawing.Size(15, 13)
         Me.setinfoclosedetector.TabIndex = 7
         Me.setinfoclosedetector.Text = "N"
+        Me.setinfoclosedetector.Visible = False
         '
         'lang
         '
@@ -558,6 +560,7 @@ Partial Class Form1
         Me.lang.Size = New System.Drawing.Size(41, 13)
         Me.lang.TabIndex = 8
         Me.lang.Text = "English"
+        Me.lang.Visible = False
         '
         'Form1
         '
