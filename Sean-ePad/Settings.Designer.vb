@@ -36,11 +36,13 @@ Partial Class Settings
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.nofeaturealerts = New System.Windows.Forms.CheckBox()
+        Me.debug_enable = New System.Windows.Forms.CheckBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(86, 171)
+        Me.Button1.Location = New System.Drawing.Point(86, 198)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -49,7 +51,7 @@ Partial Class Settings
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(5, 171)
+        Me.Button2.Location = New System.Drawing.Point(5, 198)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
@@ -59,7 +61,7 @@ Partial Class Settings
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(167, 171)
+        Me.Button3.Location = New System.Drawing.Point(167, 198)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -125,9 +127,12 @@ Partial Class Settings
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
+        Me.HelpProvider1.SetHelpString(Me.ComboBox1, "Changes the language of Sean-ePad. Not all of the program, including these help s" &
+        "trings, are translated.")
         Me.ComboBox1.Items.AddRange(New Object() {"English", "Japanese", "Afrikaans", "Albanian"})
         Me.ComboBox1.Location = New System.Drawing.Point(76, 79)
         Me.ComboBox1.Name = "ComboBox1"
+        Me.HelpProvider1.SetShowHelp(Me.ComboBox1, True)
         Me.ComboBox1.Size = New System.Drawing.Size(166, 21)
         Me.ComboBox1.TabIndex = 10
         '
@@ -145,18 +150,33 @@ Partial Class Settings
         'nofeaturealerts
         '
         Me.nofeaturealerts.AutoSize = True
+        Me.HelpProvider1.SetHelpString(Me.nofeaturealerts, "Disables warnings about some features not working as they should")
         Me.nofeaturealerts.Location = New System.Drawing.Point(15, 142)
         Me.nofeaturealerts.Name = "nofeaturealerts"
+        Me.HelpProvider1.SetShowHelp(Me.nofeaturealerts, True)
         Me.nofeaturealerts.Size = New System.Drawing.Size(143, 17)
         Me.nofeaturealerts.TabIndex = 12
         Me.nofeaturealerts.Text = "Don't show feature alerts"
         Me.nofeaturealerts.UseVisualStyleBackColor = True
         '
+        'debug_enable
+        '
+        Me.debug_enable.AutoSize = True
+        Me.HelpProvider1.SetHelpString(Me.debug_enable, "Shows elements and message boxes used for debugging")
+        Me.debug_enable.Location = New System.Drawing.Point(15, 165)
+        Me.debug_enable.Name = "debug_enable"
+        Me.HelpProvider1.SetShowHelp(Me.debug_enable, True)
+        Me.debug_enable.Size = New System.Drawing.Size(177, 17)
+        Me.debug_enable.TabIndex = 13
+        Me.debug_enable.Text = "Show debug text and msgboxes"
+        Me.debug_enable.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 218)
+        Me.ClientSize = New System.Drawing.Size(269, 234)
+        Me.Controls.Add(Me.debug_enable)
         Me.Controls.Add(Me.nofeaturealerts)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.ComboBox1)
@@ -193,4 +213,6 @@ Partial Class Settings
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents nofeaturealerts As CheckBox
+    Friend WithEvents debug_enable As CheckBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports System.Runtime.InteropServices
+
 Public Class Form1
     Dim current_file As String
     Dim draft As String
@@ -147,8 +149,10 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'MsgBox(s_file)
-        'MsgBox(draft)
+        If System.IO.File.Exists("showdebug") Then
+            MsgBox(s_file)
+            MsgBox(draft)
+        End If
         If draft = s_file Then
 
         Else
@@ -384,6 +388,17 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
         If RichTextBox1.Text = "" Then
         Else
             My.Computer.Clipboard.SetText(RichTextBox1.Text)
+        End If
+    End Sub
+
+    Private Sub RunToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RunToolStripMenuItem.Click
+        Run.Show()
+    End Sub
+
+    Private Sub CopyFilePathToClipboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyFilePathToClipboardToolStripMenuItem.Click
+        If RichTextBox1.Text = "" Then
+        Else
+            My.Computer.Clipboard.SetText(current_file)
         End If
     End Sub
 End Class

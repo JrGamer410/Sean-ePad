@@ -18,3 +18,4 @@ C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.keys.resourc
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.MLAFormatInsert.resources
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.CharacterDialog.resources
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.settingsinfo.resources
+C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.Run.resources

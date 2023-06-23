@@ -50,7 +50,6 @@ Partial Class About
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Enabled = False
         Me.LinkLabel1.Location = New System.Drawing.Point(169, 85)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(28, 13)

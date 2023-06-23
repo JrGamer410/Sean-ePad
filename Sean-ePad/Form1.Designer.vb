@@ -94,12 +94,15 @@ Partial Class Form1
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.setinfoclosedetector = New System.Windows.Forms.Label()
         Me.lang = New System.Windows.Forms.Label()
+        Me.MoreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyFilePathToClipboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.InsertToolStripMenuItem, Me.MoreToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.InsertToolStripMenuItem, Me.MoreToolStripMenuItem, Me.MoreToolStripMenuItem1, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1491, 24)
@@ -181,7 +184,7 @@ Partial Class Form1
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyEntireDocumentToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyEntireDocumentToolStripMenuItem, Me.CopyFilePathToClipboardToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -205,7 +208,7 @@ Partial Class Form1
         '
         Me.WordCountToolStripMenuItem.Enabled = False
         Me.WordCountToolStripMenuItem.Name = "WordCountToolStripMenuItem"
-        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.WordCountToolStripMenuItem.Text = "Word Count"
         '
         'FormatToolStripMenuItem
@@ -562,6 +565,26 @@ Partial Class Form1
         Me.lang.Text = "English"
         Me.lang.Visible = False
         '
+        'MoreToolStripMenuItem1
+        '
+        Me.MoreToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunToolStripMenuItem})
+        Me.MoreToolStripMenuItem1.Name = "MoreToolStripMenuItem1"
+        Me.MoreToolStripMenuItem1.Size = New System.Drawing.Size(47, 20)
+        Me.MoreToolStripMenuItem1.Text = "More"
+        '
+        'RunToolStripMenuItem
+        '
+        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
+        Me.RunToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RunToolStripMenuItem.Text = "Run..."
+        '
+        'CopyFilePathToClipboardToolStripMenuItem
+        '
+        Me.CopyFilePathToClipboardToolStripMenuItem.Name = "CopyFilePathToClipboardToolStripMenuItem"
+        Me.CopyFilePathToClipboardToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
+        Me.CopyFilePathToClipboardToolStripMenuItem.Text = "Copy File Path to Clipboard"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -655,4 +678,7 @@ Partial Class Form1
     Friend WithEvents UsingNamespaceStdToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WordCountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lang As Label
+    Friend WithEvents MoreToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyFilePathToClipboardToolStripMenuItem As ToolStripMenuItem
 End Class

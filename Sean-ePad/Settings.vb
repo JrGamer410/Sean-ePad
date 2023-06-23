@@ -14,6 +14,18 @@
                 My.Computer.FileSystem.DeleteFile("nofeaturealerts")
             End If
         End If
+        If debug_enable.Checked = True Then
+            Dim file As System.IO.StreamWriter
+            file = My.Computer.FileSystem.OpenTextFileWriter("showdebug", True)
+            file.WriteLine("")
+            file.Close()
+            Form1.lang.Visible = True
+            Form1.setinfoclosedetector.Visible = True
+        Else
+            Form1.lang.Visible = False
+            Form1.setinfoclosedetector.Visible = False
+            My.Computer.FileSystem.DeleteFile("showdebug")
+        End If
         Me.Close()
     End Sub
 
@@ -126,6 +138,9 @@
         Else
             nofeaturealerts.Checked = False
         End If
+        If Form1.lang.Visible = True Or System.IO.File.Exists("showdebug") Then
+            debug_enable.Checked = True
+        End If
     End Sub
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles nofeaturealerts.CheckedChanged
@@ -137,6 +152,10 @@
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
+    End Sub
+
+    Private Sub debug_enable_CheckedChanged(sender As Object, e As EventArgs) Handles debug_enable.CheckedChanged
 
     End Sub
 End Class

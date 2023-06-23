@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Shell("start msedge https://srjamis.wixsite.com/seane/sean-epad")
+        Shell("cmd /c start https://github.com/JrGamer410/Sean-ePad")
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
