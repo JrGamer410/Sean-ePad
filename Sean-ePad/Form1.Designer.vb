@@ -36,6 +36,7 @@ Partial Class Form1
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyEntireDocumentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyFilePathToClipboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WordCountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,13 +51,6 @@ Partial Class Form1
         Me.InsertAnMLAFormatBookReportStartingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenCharacterDialogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,10 +72,15 @@ Partial Class Form1
         Me.ToolStripMenuItem27 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem28 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem29 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncodeIntoBase64ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShortcutKeysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -94,18 +93,17 @@ Partial Class Form1
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.setinfoclosedetector = New System.Windows.Forms.Label()
         Me.lang = New System.Windows.Forms.Label()
-        Me.MoreToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyFilePathToClipboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WordCount0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.InsertToolStripMenuItem, Me.MoreToolStripMenuItem, Me.MoreToolStripMenuItem1, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.InsertToolStripMenuItem, Me.MoreToolStripMenuItem, Me.MoreToolStripMenuItem1, Me.HelpToolStripMenuItem, Me.WordCount0ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1491, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1988, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -197,6 +195,12 @@ Partial Class Form1
         Me.CopyEntireDocumentToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
         Me.CopyEntireDocumentToolStripMenuItem.Text = "Copy Entire Document"
         '
+        'CopyFilePathToClipboardToolStripMenuItem
+        '
+        Me.CopyFilePathToClipboardToolStripMenuItem.Name = "CopyFilePathToClipboardToolStripMenuItem"
+        Me.CopyFilePathToClipboardToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
+        Me.CopyFilePathToClipboardToolStripMenuItem.Text = "Copy File Path to Clipboard"
+        '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WordCountToolStripMenuItem})
@@ -206,7 +210,6 @@ Partial Class Form1
         '
         'WordCountToolStripMenuItem
         '
-        Me.WordCountToolStripMenuItem.Enabled = False
         Me.WordCountToolStripMenuItem.Name = "WordCountToolStripMenuItem"
         Me.WordCountToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.WordCountToolStripMenuItem.Text = "Word Count"
@@ -279,7 +282,7 @@ Partial Class Form1
         '
         'MoreToolStripMenuItem
         '
-        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenCharacterDialogToolStripMenuItem, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ToolStripMenuItem9, Me.ToolStripMenuItem10, Me.ToolStripMenuItem11, Me.ToolStripMenuItem12, Me.ToolStripMenuItem13, Me.ToolStripMenuItem14, Me.ToolStripMenuItem15, Me.ToolStripMenuItem16, Me.ToolStripMenuItem17, Me.ToolStripMenuItem18, Me.ToolStripMenuItem19, Me.ToolStripMenuItem20, Me.ToolStripMenuItem21, Me.ToolStripMenuItem2, Me.ToolStripMenuItem22, Me.ToolStripMenuItem23, Me.ToolStripMenuItem24, Me.ToolStripMenuItem25, Me.ToolStripMenuItem26, Me.ToolStripMenuItem27, Me.ToolStripMenuItem28, Me.ToolStripMenuItem29})
+        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenCharacterDialogToolStripMenuItem, Me.ToolStripMenuItem10, Me.ToolStripMenuItem11, Me.ToolStripMenuItem12, Me.ToolStripMenuItem13, Me.ToolStripMenuItem14, Me.ToolStripMenuItem15, Me.ToolStripMenuItem16, Me.ToolStripMenuItem17, Me.ToolStripMenuItem18, Me.ToolStripMenuItem19, Me.ToolStripMenuItem20, Me.ToolStripMenuItem21, Me.ToolStripMenuItem2, Me.ToolStripMenuItem22, Me.ToolStripMenuItem23, Me.ToolStripMenuItem24, Me.ToolStripMenuItem25, Me.ToolStripMenuItem26, Me.ToolStripMenuItem27, Me.ToolStripMenuItem28, Me.ToolStripMenuItem29})
         Me.MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
         Me.MoreToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.MoreToolStripMenuItem.Text = "Characters"
@@ -289,48 +292,6 @@ Partial Class Form1
         Me.OpenCharacterDialogToolStripMenuItem.Name = "OpenCharacterDialogToolStripMenuItem"
         Me.OpenCharacterDialogToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.OpenCharacterDialogToolStripMenuItem.Text = "Open Character Dialog..."
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem3.Text = "©"
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem4.Text = "®"
-        '
-        'ToolStripMenuItem5
-        '
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem5.Text = "¼"
-        '
-        'ToolStripMenuItem6
-        '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem6.Text = "±"
-        '
-        'ToolStripMenuItem7
-        '
-        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem7.Text = "½"
-        '
-        'ToolStripMenuItem8
-        '
-        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem8.Text = "¾"
-        '
-        'ToolStripMenuItem9
-        '
-        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(203, 22)
-        Me.ToolStripMenuItem9.Text = "¿"
         '
         'ToolStripMenuItem10
         '
@@ -458,9 +419,29 @@ Partial Class Form1
         Me.ToolStripMenuItem29.Size = New System.Drawing.Size(203, 22)
         Me.ToolStripMenuItem29.Text = "‽"
         '
+        'MoreToolStripMenuItem1
+        '
+        Me.MoreToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunToolStripMenuItem, Me.EncodeIntoBase64ToolStripMenuItem})
+        Me.MoreToolStripMenuItem1.Name = "MoreToolStripMenuItem1"
+        Me.MoreToolStripMenuItem1.Size = New System.Drawing.Size(47, 20)
+        Me.MoreToolStripMenuItem1.Text = "More"
+        '
+        'RunToolStripMenuItem
+        '
+        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
+        Me.RunToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.RunToolStripMenuItem.Text = "Run..."
+        '
+        'EncodeIntoBase64ToolStripMenuItem
+        '
+        Me.EncodeIntoBase64ToolStripMenuItem.Name = "EncodeIntoBase64ToolStripMenuItem"
+        Me.EncodeIntoBase64ToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.EncodeIntoBase64ToolStripMenuItem.Text = "Encode into base64"
+        '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.DocumentationToolStripMenuItem, Me.ShortcutKeysToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.DocumentationToolStripMenuItem, Me.ShortcutKeysToolStripMenuItem, Me.WhatsNewToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -486,6 +467,19 @@ Partial Class Form1
         Me.ShortcutKeysToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.ShortcutKeysToolStripMenuItem.Text = "Shortcut Keys"
         '
+        'WhatsNewToolStripMenuItem
+        '
+        Me.WhatsNewToolStripMenuItem.Name = "WhatsNewToolStripMenuItem"
+        Me.WhatsNewToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.WhatsNewToolStripMenuItem.Text = "What's New"
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Enabled = False
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
+        '
         'SaveFileDialog1
         '
         Me.SaveFileDialog1.Filter = resources.GetString("SaveFileDialog1.Filter")
@@ -493,9 +487,10 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(627, 109)
+        Me.Label1.Location = New System.Drawing.Point(836, 134)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.Size = New System.Drawing.Size(0, 16)
         Me.Label1.TabIndex = 2
         Me.Label1.Visible = False
         '
@@ -506,16 +501,18 @@ Partial Class Form1
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(470, 654)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(627, 805)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
         Me.MonthCalendar1.Visible = False
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(803, 735)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1071, 905)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(265, 22)
         Me.DateTimePicker1.TabIndex = 4
         Me.DateTimePicker1.Visible = False
         '
@@ -523,8 +520,9 @@ Partial Class Form1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(1491, 732)
+        Me.RichTextBox1.Size = New System.Drawing.Size(1988, 906)
         Me.RichTextBox1.TabIndex = 6
         Me.RichTextBox1.Text = ""
         '
@@ -548,9 +546,10 @@ Partial Class Form1
         'setinfoclosedetector
         '
         Me.setinfoclosedetector.AutoSize = True
-        Me.setinfoclosedetector.Location = New System.Drawing.Point(397, 11)
+        Me.setinfoclosedetector.Location = New System.Drawing.Point(529, 14)
+        Me.setinfoclosedetector.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.setinfoclosedetector.Name = "setinfoclosedetector"
-        Me.setinfoclosedetector.Size = New System.Drawing.Size(15, 13)
+        Me.setinfoclosedetector.Size = New System.Drawing.Size(17, 16)
         Me.setinfoclosedetector.TabIndex = 7
         Me.setinfoclosedetector.Text = "N"
         Me.setinfoclosedetector.Visible = False
@@ -558,38 +557,27 @@ Partial Class Form1
         'lang
         '
         Me.lang.AutoSize = True
-        Me.lang.Location = New System.Drawing.Point(496, 11)
+        Me.lang.Location = New System.Drawing.Point(661, 14)
+        Me.lang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lang.Name = "lang"
-        Me.lang.Size = New System.Drawing.Size(41, 13)
+        Me.lang.Size = New System.Drawing.Size(51, 16)
         Me.lang.TabIndex = 8
         Me.lang.Text = "English"
         Me.lang.Visible = False
         '
-        'MoreToolStripMenuItem1
+        'WordCount0ToolStripMenuItem
         '
-        Me.MoreToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunToolStripMenuItem})
-        Me.MoreToolStripMenuItem1.Name = "MoreToolStripMenuItem1"
-        Me.MoreToolStripMenuItem1.Size = New System.Drawing.Size(47, 20)
-        Me.MoreToolStripMenuItem1.Text = "More"
-        '
-        'RunToolStripMenuItem
-        '
-        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
-        Me.RunToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RunToolStripMenuItem.Text = "Run..."
-        '
-        'CopyFilePathToClipboardToolStripMenuItem
-        '
-        Me.CopyFilePathToClipboardToolStripMenuItem.Name = "CopyFilePathToClipboardToolStripMenuItem"
-        Me.CopyFilePathToClipboardToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
-        Me.CopyFilePathToClipboardToolStripMenuItem.Text = "Copy File Path to Clipboard"
+        Me.WordCount0ToolStripMenuItem.Enabled = False
+        Me.WordCount0ToolStripMenuItem.Name = "WordCount0ToolStripMenuItem"
+        Me.WordCount0ToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.WordCount0ToolStripMenuItem.Text = "Word Count: 0"
+        Me.WordCount0ToolStripMenuItem.Visible = False
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1491, 756)
+        Me.ClientSize = New System.Drawing.Size(1988, 930)
         Me.Controls.Add(Me.lang)
         Me.Controls.Add(Me.setinfoclosedetector)
         Me.Controls.Add(Me.RichTextBox1)
@@ -597,7 +585,9 @@ Partial Class Form1
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Sean-ePad"
         Me.MenuStrip1.ResumeLayout(False)
@@ -636,15 +626,8 @@ Partial Class Form1
     Friend WithEvents BoldToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DocumentationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewWindowToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
     Friend WithEvents ShortcutKeysToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
@@ -681,4 +664,8 @@ Partial Class Form1
     Friend WithEvents MoreToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CopyFilePathToClipboardToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WhatsNewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EncodeIntoBase64ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WordCount0ToolStripMenuItem As ToolStripMenuItem
 End Class

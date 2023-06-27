@@ -78,6 +78,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="base64_encode.Designer.vb">
+      <DependentUpon>base64_encode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base64_encode.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CharacterDialog.Designer.vb">
       <DependentUpon>CharacterDialog.vb</DependentUpon>
     </Compile>
@@ -149,10 +155,19 @@
     <Compile Include="settingsinfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="whatsnew.Designer.vb">
+      <DependentUpon>whatsnew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="whatsnew.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base64_encode.resx">
+      <DependentUpon>base64_encode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterDialog.resx">
       <DependentUpon>CharacterDialog.vb</DependentUpon>
@@ -186,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="settingsinfo.resx">
       <DependentUpon>settingsinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="whatsnew.resx">
+      <DependentUpon>whatsnew.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -34,4 +34,8 @@ Public Class CharacterDialog
             Label1.Text = "Zgjidhni një personazh:"
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        My.Computer.Clipboard.SetText(ListBox1.SelectedItem)
+    End Sub
 End Class

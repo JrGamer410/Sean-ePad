@@ -19,3 +19,5 @@ C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.MLAFormatIns
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.CharacterDialog.resources
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.settingsinfo.resources
 C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.Run.resources
+C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.whatsnew.resources
+C:\Users\srjam\source\repos\Sean-ePad\Sean-ePad\obj\Debug\Sean_ePad.base64_encode.resources

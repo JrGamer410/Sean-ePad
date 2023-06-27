@@ -143,13 +143,41 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
+        Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\no_new_dialog")
+        Dim appDataPath2 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath2 As String = Path.Combine(appDataPath2, "Sean-ePad\wordcount")
+        If System.IO.File.Exists(filePath) Then
+        Else
+            whatsnew.Show()
+        End If
+        If System.IO.File.Exists(filePath2) Then
+            WordCount0ToolStripMenuItem.Visible = True
+        End If
 
         Process.Start("Tips.exe")
         'settingsinfo.Show()
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If System.IO.File.Exists("showdebug") Then
+        Dim appDataPath_ru As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath_ru As String = Path.Combine(appDataPath_ru, "Sean-ePad\russian")
+        Dim appDataPath_jp As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath_jp As String = Path.Combine(appDataPath_jp, "Sean-ePad\japanese")
+        Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\showdebug")
+        Dim appDataPath2 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath2 As String = Path.Combine(appDataPath2, "Sean-ePad\wordcount")
+        If System.IO.File.Exists(filePath_jp) Then
+            lang.Text = "Japanese"
+        End If
+        If System.IO.File.Exists(filePath_ru) Then
+            lang.Text = "Russian"
+        End If
+        If System.IO.File.Exists(filePath2) Then
+            WordCount0ToolStripMenuItem.Visible = True
+        End If
+        If System.IO.File.Exists(filePath) Then
             MsgBox(s_file)
             MsgBox(draft)
         End If
@@ -203,7 +231,7 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
 
     End Sub
 
-    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "©"
     End Sub
 
@@ -211,15 +239,15 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
 
     End Sub
 
-    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "®"
     End Sub
 
-    Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
+    Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "¼"
     End Sub
 
-    Private Sub ToolStripMenuItem6_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6.Click
+    Private Sub ToolStripMenuItem6_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "±"
     End Sub
 
@@ -238,17 +266,20 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
         draft = RichTextBox1.Text
+        Dim word_count As Integer
+        word_count = RichTextBox1.TextLength
+        WordCount0ToolStripMenuItem.Text = "Word Count: " & word_count
     End Sub
 
-    Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem7.Click
+    Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "½"
     End Sub
 
-    Private Sub ToolStripMenuItem8_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem8.Click
+    Private Sub ToolStripMenuItem8_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "¾"
     End Sub
 
-    Private Sub ToolStripMenuItem9_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem9.Click
+    Private Sub ToolStripMenuItem9_Click(sender As Object, e As EventArgs)
         RichTextBox1.Text &= "¿"
     End Sub
 
@@ -342,7 +373,9 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
 
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
         'MsgBox("This feature is currently broken. It only prints a blank piece of paper. So if you want to do that, go ahead.", 0 + 48, "Broken Feature Alert")
-        If System.IO.File.Exists("nofeaturealerts") Then
+        Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\nofeaturealerts")
+        If System.IO.File.Exists(filePath) Then
 
         Else
 
@@ -399,6 +432,44 @@ Wil jy jou huidige lêer stoor?", "Sean-ePad", MessageBoxButtons.YesNoCancel, Me
         If RichTextBox1.Text = "" Then
         Else
             My.Computer.Clipboard.SetText(current_file)
+        End If
+    End Sub
+
+    Private Sub DownloadLatestVersionToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub WhatsNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WhatsNewToolStripMenuItem.Click
+        whatsnew.Show()
+    End Sub
+
+    Private Sub EncodeIntoBase64ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncodeIntoBase64ToolStripMenuItem.Click
+        base64_encode.Show()
+    End Sub
+
+    Private Sub WordCountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordCountToolStripMenuItem.Click
+        MsgBox("The document currently has " & RichTextBox1.TextLength & " characters.", 0 + 64, "Word Count")
+    End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
+        Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\update_downloader.bat")
+        Dim appDataPath2 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath2 As String = Path.Combine(appDataPath2, "Sean-ePad\Sean-ePad.Setup.exe")
+        Dim file As System.IO.StreamWriter
+        file = My.Computer.FileSystem.OpenTextFileWriter(filePath, True)
+        file.WriteLine("
+@echo off
+curl -O https://github.com/JrGamer410/Sean-ePad/releases/download/1.6/Sean-ePad.Setup.exe")
+        file.Close()
+        Process.Start(filePath)
+        System.Threading.Thread.Sleep("5000")
+        If System.IO.File.Exists(filePath2) Then
+            Dim dialog2 As DialogResult
+            dialog2 = MessageBox.Show("An update is avaliable. Would you like to run it?", "Sean-ePad", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If dialog2 = DialogResult.Yes Then
+                Process.Start(filePath2)
+            End If
         End If
     End Sub
 End Class

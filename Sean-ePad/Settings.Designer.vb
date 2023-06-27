@@ -38,11 +38,12 @@ Partial Class Settings
         Me.nofeaturealerts = New System.Windows.Forms.CheckBox()
         Me.debug_enable = New System.Windows.Forms.CheckBox()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.word_count = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(86, 198)
+        Me.Button1.Location = New System.Drawing.Point(86, 209)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -51,7 +52,7 @@ Partial Class Settings
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(5, 198)
+        Me.Button2.Location = New System.Drawing.Point(5, 209)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
@@ -61,7 +62,7 @@ Partial Class Settings
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(167, 198)
+        Me.Button3.Location = New System.Drawing.Point(167, 209)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -129,7 +130,7 @@ Partial Class Settings
         Me.ComboBox1.FormattingEnabled = True
         Me.HelpProvider1.SetHelpString(Me.ComboBox1, "Changes the language of Sean-ePad. Not all of the program, including these help s" &
         "trings, are translated.")
-        Me.ComboBox1.Items.AddRange(New Object() {"English", "Japanese", "Afrikaans", "Albanian"})
+        Me.ComboBox1.Items.AddRange(New Object() {"English", "Japanese", "Afrikaans", "Albanian", "Japanese", "Russian"})
         Me.ComboBox1.Location = New System.Drawing.Point(76, 79)
         Me.ComboBox1.Name = "ComboBox1"
         Me.HelpProvider1.SetShowHelp(Me.ComboBox1, True)
@@ -171,11 +172,22 @@ Partial Class Settings
         Me.debug_enable.Text = "Show debug text and msgboxes"
         Me.debug_enable.UseVisualStyleBackColor = True
         '
+        'word_count
+        '
+        Me.word_count.AutoSize = True
+        Me.word_count.Location = New System.Drawing.Point(15, 188)
+        Me.word_count.Name = "word_count"
+        Me.word_count.Size = New System.Drawing.Size(167, 17)
+        Me.word_count.TabIndex = 14
+        Me.word_count.Text = "Show word count while typing"
+        Me.word_count.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 234)
+        Me.ClientSize = New System.Drawing.Size(269, 240)
+        Me.Controls.Add(Me.word_count)
         Me.Controls.Add(Me.debug_enable)
         Me.Controls.Add(Me.nofeaturealerts)
         Me.Controls.Add(Me.CheckBox1)
@@ -215,4 +227,5 @@ Partial Class Settings
     Friend WithEvents nofeaturealerts As CheckBox
     Friend WithEvents debug_enable As CheckBox
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents word_count As CheckBox
 End Class
