@@ -39,11 +39,12 @@ Partial Class Settings
         Me.debug_enable = New System.Windows.Forms.CheckBox()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.word_count = New System.Windows.Forms.CheckBox()
+        Me.whatsnewchkbox = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(86, 209)
+        Me.Button1.Location = New System.Drawing.Point(88, 256)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -52,7 +53,7 @@ Partial Class Settings
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(5, 209)
+        Me.Button2.Location = New System.Drawing.Point(7, 256)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
@@ -62,7 +63,7 @@ Partial Class Settings
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(167, 209)
+        Me.Button3.Location = New System.Drawing.Point(169, 256)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -182,11 +183,22 @@ Partial Class Settings
         Me.word_count.Text = "Show word count while typing"
         Me.word_count.UseVisualStyleBackColor = True
         '
+        'whatsnewchkbox
+        '
+        Me.whatsnewchkbox.AutoSize = True
+        Me.whatsnewchkbox.Location = New System.Drawing.Point(15, 211)
+        Me.whatsnewchkbox.Name = "whatsnewchkbox"
+        Me.whatsnewchkbox.Size = New System.Drawing.Size(236, 17)
+        Me.whatsnewchkbox.TabIndex = 15
+        Me.whatsnewchkbox.Text = "Show What's New dialog on program launch"
+        Me.whatsnewchkbox.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 240)
+        Me.ClientSize = New System.Drawing.Size(269, 291)
+        Me.Controls.Add(Me.whatsnewchkbox)
         Me.Controls.Add(Me.word_count)
         Me.Controls.Add(Me.debug_enable)
         Me.Controls.Add(Me.nofeaturealerts)
@@ -228,4 +240,5 @@ Partial Class Settings
     Friend WithEvents debug_enable As CheckBox
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents word_count As CheckBox
+    Friend WithEvents whatsnewchkbox As CheckBox
 End Class

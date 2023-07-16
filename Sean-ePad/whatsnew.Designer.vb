@@ -22,7 +22,6 @@ Partial Class whatsnew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(whatsnew))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -34,9 +33,9 @@ Partial Class whatsnew
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(217, 13)
+        Me.Label1.Size = New System.Drawing.Size(226, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "New features introduced in Sean-ePad v1.7:"
+        Me.Label1.Text = "New features introduced in Sean-ePad v1.7.2:"
         '
         'RichTextBox1
         '
@@ -45,7 +44,8 @@ Partial Class whatsnew
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(502, 245)
         Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.RichTextBox1.Text = "- Fixed an issue with saving " & Global.Microsoft.VisualBasic.ChrW(10) & "- Makes enabling/disabling the What's New dialog on" &
+    " startup easier"
         '
         'CheckBox1
         '

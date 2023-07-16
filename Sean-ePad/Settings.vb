@@ -14,7 +14,16 @@ Public Class Settings
         Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\showdebug")
         Dim appDataPath3 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
         Dim filePath3 As String = Path.Combine(appDataPath3, "Sean-ePad\wordcount")
-
+        Dim appDataPath4 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath4 As String = Path.Combine(appDataPath4, "Sean-ePad\no_new_dialog")
+        If whatsnewchkbox.Checked = True Then
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath4))
+            file = My.Computer.FileSystem.OpenTextFileWriter(filePath4, True)
+            file.WriteLine("")
+            file.Close()
+        Else
+            My.Computer.FileSystem.DeleteFile(filePath4)
+        End If
         If nofeaturealerts.Checked = True Then
             Directory.CreateDirectory(Path.GetDirectoryName(filePath2))
             file = My.Computer.FileSystem.OpenTextFileWriter(filePath2, True)
@@ -157,6 +166,8 @@ hulpbron, en Sean-ePad sal dit vir jou oopmaak."
         Dim filePath2 As String = Path.Combine(appDataPath2, "Sean-ePad\nofeaturealerts")
         Dim appDataPath3 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
         Dim filePath3 As String = Path.Combine(appDataPath3, "Sean-ePad\wordcount")
+        Dim appDataPath4 As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+        Dim filePath4 As String = Path.Combine(appDataPath4, "Sean-ePad\no_new_dialog")
         'If Form1.setinfoclosedetector.Text = "Y" Then
         'CheckBox1.Enabled = False
         'nofeaturealerts.Enabled = False
@@ -168,6 +179,9 @@ hulpbron, en Sean-ePad sal dit vir jou oopmaak."
         'nofeaturealerts.Checked = True
         'End If
         'End If
+        If System.IO.File.Exists(filePath4) Then
+            whatsnewchkbox.Checked = True
+        End If
         If Form1.lang.Text = "English" Then
             Form1.lang.Text = "English"
             Label2.Text = ""

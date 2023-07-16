@@ -1,7 +1,14 @@
 ﻿Imports System.IO
 
 Public Class whatsnew
+    Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+    Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\no_new_dialog")
     Private Sub whatsnew_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If File.Exists(appDataPath) Then
+            CheckBox1.Checked = True
+        Else
+            CheckBox1.Checked = False
+        End If
         If Form1.lang.Text = "Japanese" Then
             CheckBox1.Text = "Sean-ePad が起動するたびにこれを表示します"
             Button1.Text = "近い"

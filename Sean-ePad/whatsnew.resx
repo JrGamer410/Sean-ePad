@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>- Japanese Language Support
-- What's New dialog
-- Settings now save to the AppData folder
-- Russian Language Support
-- Base64 Encode Support
-- Some language prefrences save
-- Word Count
-
-New features in v1.7.1:
-Possible Hotfix
-</value>
-  </data>
 </root>
