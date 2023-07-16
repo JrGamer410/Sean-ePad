@@ -81,6 +81,7 @@ Partial Class Form1
         Me.ShortcutKeysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WhatsNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WordCount0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -93,7 +94,7 @@ Partial Class Form1
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.setinfoclosedetector = New System.Windows.Forms.Label()
         Me.lang = New System.Windows.Forms.Label()
-        Me.WordCount0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BlankCharacterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -237,7 +238,7 @@ Partial Class Form1
         '
         'InsertToolStripMenuItem
         '
-        Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateTimeToolStripMenuItem, Me.CodeExamplesToolStripMenuItem, Me.DateAndTimeToolStripMenuItem, Me.InsertAnMLAFormatBookReportStartingToolStripMenuItem})
+        Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateTimeToolStripMenuItem, Me.CodeExamplesToolStripMenuItem, Me.DateAndTimeToolStripMenuItem, Me.InsertAnMLAFormatBookReportStartingToolStripMenuItem, Me.BlankCharacterToolStripMenuItem})
         Me.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem"
         Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.InsertToolStripMenuItem.Text = "Insert"
@@ -480,6 +481,14 @@ Partial Class Form1
         Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
         '
+        'WordCount0ToolStripMenuItem
+        '
+        Me.WordCount0ToolStripMenuItem.Enabled = False
+        Me.WordCount0ToolStripMenuItem.Name = "WordCount0ToolStripMenuItem"
+        Me.WordCount0ToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.WordCount0ToolStripMenuItem.Text = "Word Count: 0"
+        Me.WordCount0ToolStripMenuItem.Visible = False
+        '
         'SaveFileDialog1
         '
         Me.SaveFileDialog1.Filter = resources.GetString("SaveFileDialog1.Filter")
@@ -565,13 +574,11 @@ Partial Class Form1
         Me.lang.Text = "English"
         Me.lang.Visible = False
         '
-        'WordCount0ToolStripMenuItem
+        'BlankCharacterToolStripMenuItem
         '
-        Me.WordCount0ToolStripMenuItem.Enabled = False
-        Me.WordCount0ToolStripMenuItem.Name = "WordCount0ToolStripMenuItem"
-        Me.WordCount0ToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
-        Me.WordCount0ToolStripMenuItem.Text = "Word Count: 0"
-        Me.WordCount0ToolStripMenuItem.Visible = False
+        Me.BlankCharacterToolStripMenuItem.Name = "BlankCharacterToolStripMenuItem"
+        Me.BlankCharacterToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
+        Me.BlankCharacterToolStripMenuItem.Text = "Blank Character"
         '
         'Form1
         '
@@ -668,4 +675,5 @@ Partial Class Form1
     Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncodeIntoBase64ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WordCount0ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BlankCharacterToolStripMenuItem As ToolStripMenuItem
 End Class

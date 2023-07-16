@@ -22,6 +22,7 @@ Partial Class whatsnew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(whatsnew))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -44,9 +45,7 @@ Partial Class whatsnew
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(502, 245)
         Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = "- Japanese Language Support" & Global.Microsoft.VisualBasic.ChrW(10) & "- What's New dialog" & Global.Microsoft.VisualBasic.ChrW(10) & "- Settings now save to the AppDat" &
-    "a folder" & Global.Microsoft.VisualBasic.ChrW(10) & "- Russian Language Support" & Global.Microsoft.VisualBasic.ChrW(10) & "- Base64 Encode Support" & Global.Microsoft.VisualBasic.ChrW(10) & "- Some language pref" &
-    "rences save" & Global.Microsoft.VisualBasic.ChrW(10) & "- Word Count"
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
         'CheckBox1
         '

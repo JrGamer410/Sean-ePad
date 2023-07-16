@@ -27,6 +27,7 @@ Public Class whatsnew
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         Dim appDataPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
         Dim filePath As String = Path.Combine(appDataPath, "Sean-ePad\no_new_dialog")
+        Directory.CreateDirectory(Path.GetDirectoryName(filePath))
         If CheckBox1.Checked = True Then
             If System.IO.File.Exists(filePath) Then
                 My.Computer.FileSystem.DeleteFile(filePath)

@@ -16,6 +16,7 @@ Public Class Settings
         Dim filePath3 As String = Path.Combine(appDataPath3, "Sean-ePad\wordcount")
 
         If nofeaturealerts.Checked = True Then
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath2))
             file = My.Computer.FileSystem.OpenTextFileWriter(filePath2, True)
             file.WriteLine("")
             file.Close()
@@ -25,6 +26,7 @@ Public Class Settings
             End If
         End If
         If word_count.Checked = True Then
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath3))
             file = My.Computer.FileSystem.OpenTextFileWriter(filePath3, True)
             file.WriteLine("")
             file.Close()

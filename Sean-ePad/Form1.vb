@@ -472,4 +472,8 @@ curl -O https://github.com/JrGamer410/Sean-ePad/releases/download/1.6/Sean-ePad.
             End If
         End If
     End Sub
+
+    Private Sub BlankCharacterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BlankCharacterToolStripMenuItem.Click
+        RichTextBox1.Text &= "‎ "
+    End Sub
 End Class
